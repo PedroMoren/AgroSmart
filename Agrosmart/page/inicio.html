@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroSmart+</title>
+    <link rel="shortcut icon" href="../image/Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Estilo padrão e modo escuro */
+        body.dark-mode {
+            background-color: #515151;
+            color: #ffffff;
+        }
+        header.dark-mode {
+            background-color: #333;
+        }
+        table.dark-mode {
+        background-color: #666666; /* Fundo escuro para a tabela */
+        color: #ffffff; /* Texto claro */
+        border-color: #333; /* Cor da borda */
+        }   
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h2>
+            AGROSMART +
+          </h2>
+        
+<div class="icon-container">
+<!-- Ícone de clima -->
+    <label for="toggle-weather" class="weather">
+        <i class="fa-solid fa-cloud-sun"></i>
+    </label>
+    <input type="checkbox" id="toggle-weather" class="toggle-checkbox">
+    <div class="perfil-menu" id="weather-menu">
+        <div class="perfil-header">
+            <span>Clima Atual</span>
+            <label for="toggle-weather" class="close-btn">X</label>
+        </div>
+        <div class="perfil-info">
+            <div class="perfil-text">
+                <p><b>Cidade:</b> <span id="weather-city">Carregando...</span></p>
+                <p><b>Temperatura:</b> <span id="weather-temp">--°C</span></p>
+                <p><b>Condição:</b> <span id="weather-condition">--</span></p>
+                <p><b>Umidade:</b> <span id="weather-humidity">--%</span></p>
+            </div>
+            <button onclick="fetchWeatherData()">Atualizar Clima</button>
+        </div>
+    </div>
+
+    <!-- Ícone de acessibilidade -->
+    <label for="toggle-accessibility" class="perfil">
+        <i class="fa-solid fa-universal-access"></i>
+    </label>
+    <input type="checkbox" id="toggle-accessibility" class="toggle-checkbox">
+    <div class="perfil-menu" id="accessibility-menu">
+        <div class="perfil-header">
+            <span>Acessibilidade</span>
+            <label for="toggle-accessibility" class="close-btn">X</label>
+        </div>
+        <div class="perfil-info">
+            <div class="perfil-text">
+                <button class="dark-mode-toggle" onclick="toggleDarkMode()">Ativar Modo Escuro</button>
+                <button onclick="increaseFontSize()">Aumentar Fonte</button>
+                <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ícone de perfil -->
+    <label for="toggle-profile" class="perfil">
+        <i class="fa-solid fa-user"></i>
+    </label>
+    <input type="checkbox" id="toggle-profile" class="toggle-checkbox">
+    <div class="perfil-menu" id="profile-menu">
+        <div class="perfil-header">
+            <span>Bem Vindo, João</span>
+            <label for="toggle-profile" class="close-btn">X</label>
+        </div>
+        <div class="perfil-info">
+            <div class="perfil-text">
+                <p><b>Nome:</b> João Silva</p>
+                <p><b>Email:</b> joao.silva@email.com</p>
+                <p><b>Último login:</b> 10/09/2024</p>
+
+                <div class="perfil-link">
+                    <a href="../page/perfil.html" class="link-perfil">Ver perfil completo</a><a href="/Agrosmart/inicial/perfil/perfil.html" class="fa-solid fa-arrow-right"></a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <img src="../image/coamo.png" alt="logo coamo">
+        <table border="2">
+            <tr>
+                <td class="title">PRODUTOS</td>
+                <td class="title">PREÇOS</td>
+                <td class="title">DATA E HORA</td>
+            </tr>
+            <tr>
+                <td>SOJA</td>
+                <td>R$ 128,50</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>MILHO</td>
+                <td>R$ 56,30</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>TRIGO</td>
+                <td>R$ 67,00</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>CAFÉ EM COCO</td>
+                <td>R$ 29,24</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=556721088600&text&type=phone_number&app_absent=0" target="_blank">Fale com um Vendedor</a>
+    </button>
+
+    <div class="container">
+        <img src="../image/larm.jpg" alt="logo lar">
+        <table border="2">
+            <tr>
+                <td class="title">PRODUTOS</td>
+                <td class="title">PREÇOS</td>
+                <td class="title">DATA E HORA</td>
+            </tr>
+            <tr>
+                <td>SOJA</td>
+                <td>R$ 128,50</td>
+                <td>4/12/2024 12:32 </td>
+            </tr>
+            <tr>
+                <td>MILHO</td>
+                <td>R$ 56,30</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>TRIGO</td>
+                <td>R$ 67,00</td>
+                <td>4/12/2024 12:32 </td>
+            </tr>
+            <tr>
+                <td>CAFÉ EM COCO</td>
+                <td>R$20,00</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=556734243449&text&type=phone_number&app_absent=0" target="_blank">Fale com um Vendedor</a>
+    </button>
+
+    <div class="container">
+        <img src="../image/COCAMAR.png" alt="logo cocamar">
+        <table border="2">
+            <tr>
+                <td class="title">PRODUTOS</td>
+                <td class="title">PREÇOS</td>
+                <td class="title">DATA E HORA</td>
+            </tr>
+            <tr>
+                <td>SOJA</td>
+                <td>R$ 132,00</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>MILHO</td>
+                <td>R$ 60,00</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>TRIGO</td>
+                <td>R$ 72,00</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+            <tr>
+                <td>CAFÉ EM COCO</td>
+                <td>R$ 29,50</td>
+                <td>4/12/2024 12:32</td>
+            </tr>
+        </table>
+    </div>
+
+    <button class="whatsapp">
+        <a href="https://api.whatsapp.com/send/?phone=551194567890&text&type=phone_number&app_absent=0" target="_blank">Fale com um Vendedor</a>
+    </button>
+
+    <footer>
+        <p>
+            AGROSMART+ uma inovação para o agronegócio
+        </p>
+    </footer>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
