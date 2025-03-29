@@ -1,5 +1,6 @@
 # Cotação dos Grãos em Tempo Real
-
+<h2>acesse o projeto no estado atual pelo link</h2>
+https://pedromoren.github.io/AgroSmart/
 ## Descrição
 
 Este projeto visa fornecer uma plataforma em tempo real para monitorar as cotações de grãos, voltada para o setor agropecuário. A aplicação permite que agricultores, comerciantes e outros profissionais do setor acessem informações atualizadas sobre os preços de grãos como soja, milho, trigo, entre outros, auxiliando na tomada de decisões comerciais e estratégicas.
